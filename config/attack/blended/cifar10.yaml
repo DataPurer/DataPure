@@ -1,0 +1,21 @@
+amp: False
+device: cuda
+attack_label_trans: all2one
+attack_target: 0
+client_optimizer: sgd
+dataset: cifar10
+dataset_path: ../data
+frequency_save: 100 #200
+batch_size: 128
+lr: 0.01 #0.1
+lr_scheduler: CosineAnnealingLR
+model: preactresnet18 #resnet34
+pratio: 0.1
+random_seed: 2022
+sgd_momentum: 0.9
+wd: 0.0005
+attack: blended
+epochs: 100 #200
+attack_trigger_img_path: ../resource/blended/hello_kitty.jpeg
+attack_train_blended_alpha: 0.1
+attack_test_blended_alpha: 0.1
